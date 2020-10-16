@@ -1,3 +1,4 @@
+
 // import libraries
 const path = require('path');
 const express = require('express');
@@ -43,8 +44,8 @@ app.use(cookieParser());
 router(app);
 
 app.listen(port, (err) => {
-  if (err) {
-    throw err;
-  }
-  console.log(`Listening on port ${port}`);
+    if(err) {
+        throw err;
+    }
+    console.log(`Listening on port ${port}`);
 });
