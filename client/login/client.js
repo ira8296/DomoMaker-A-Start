@@ -13,7 +13,9 @@ const handleLogin = (e) => {
         return fales;
     }
     
-    console.log($("#loginForm").attr("action"), $("#loginForm").serialize(), redirect);
+    console.log($("input[name=_csrf]").val());
+    
+    sendAjax('POST', $("#loginForm").attr("action"), $("#loginForm").serialize(), redirect);
     
     return false;
 };
