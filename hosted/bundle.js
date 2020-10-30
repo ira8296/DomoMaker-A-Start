@@ -40,6 +40,13 @@ var DomoForm = function DomoForm(props) {
     type: "text",
     name: "age",
     placeholder: "Domo Age"
+  }), /*#__PURE__*/React.createElement("label", {
+    htmlFor: "color"
+  }, "Color: "), /*#__PURE__*/React.createElement("input", {
+    id: "domoColor",
+    type: "color",
+    name: "color",
+    placeholder: "Domo Color"
   }), /*#__PURE__*/React.createElement("input", {
     type: "hidden",
     name: "_csrf",
@@ -63,7 +70,10 @@ var DomoList = function DomoList(props) {
   var domoNodes = props.domos.map(function (domo) {
     return /*#__PURE__*/React.createElement("div", {
       key: domo._id,
-      className: "domo"
+      className: "domo",
+      style: {
+        backgroundColor: domo.color
+      }
     }, /*#__PURE__*/React.createElement("img", {
       src: "/assets/img/domoface.jpeg",
       alt: "domo face",
